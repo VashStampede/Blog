@@ -1,0 +1,10 @@
+<h1>Listing posts</h1>
+<%= link_to 'New post', :action => :new %>
+
+<% @posts.each do |post| %>
+    <h3>Post <%= post.id %> </h3>
+    Title : <%= post.title %> <%= link_to 'Show', :action => :show, :id => post.id %>
+    <br>
+    Text : <%= post.text %> <%= link_to 'Edit', :action => :edit, :id => post.id %>
+
+<% end %>
