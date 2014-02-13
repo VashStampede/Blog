@@ -1,7 +1,7 @@
 <h1>Listing posts</h1>
 <%= link_to 'New post', :action => :new %>
 
-<% @posts.each do |post| %>
+<% @post.each do |post| %>
     <h3>Post <%= post.id %> </h3>
     Title : <%= post.title %> <%= link_to 'Show', :action => :show, :id => post.id %>
     <br>
