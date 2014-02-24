@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
-
+  load_and_authorize_resource
   def new
     @post = Post.new
   end
 
   def create
     @post = Post.new(params[:post])
-
+    @post.user = current_user
     if @post.save
       redirect_to :action => :show, :id => @post.id
     else

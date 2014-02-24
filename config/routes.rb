@@ -1,10 +1,9 @@
   Blog::Application.routes.draw do
+  resources :posts
 
   devise_for :users
 
   devise_for :mode_lrails
-
-    resources :posts
     root :to => "welcome#index"
   end
 
