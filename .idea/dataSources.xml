@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="556405773">
+  <component name="DataSourceManagerImpl" format="xml" hash="3563274485">
     <data-source source="LOCAL" name="Rails blog: development" uuid="b0357721-20a4-4050-ba44-7e4619cd367c">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
@@ -12,6 +12,13 @@
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1:5432/blogbd</jdbc-url>
+      <user-name>postgres</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails blog: test" uuid="37b9977b-4ee0-4430-acea-3427104ec84b">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:blogbd</jdbc-url>
       <user-name>postgres</user-name>
       <libraries />
     </data-source>

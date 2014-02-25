@@ -1,5 +1,5 @@
 class UsersRole < ActiveRecord::Base
-  has_many :users_roles
-  has_many :roles, :through => :users_roles
-  # attr_accessible :title, :body
+  attr_accessible :role_id
+  belongs_to :user
+  belongs_to :role
 end

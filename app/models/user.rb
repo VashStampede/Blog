@@ -16,10 +16,14 @@ class User < ActiveRecord::Base
                   :remember_me
                   :admin
   attr_accessible :admin
-
-  private
+  has_many :posts #связь с моделью post (не трогать)
   has_many :users_roles
   has_many :roles, :through => :users_roles
- #связь с моделью post (не трогать)
-  has_many :posts
+  before_create :create_role
+  private
+
+  def create_role
+    self.roles << Role.find_by_name(:user)
+  end
+
 end
