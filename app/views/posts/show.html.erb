@@ -16,9 +16,9 @@
 <div class="span3 offset5">
 <div class="btm-proup">
 
-    <button class="btn"><%= link_to 'Back', :action => :index %></button>
+    <%= link_to 'Back', posts_path, :action => :index, :class=>"btn btn-primary" %>
     <% if can? :edit, Post %>
-        <button class="btn"><%= link_to 'Edit', :action => :edit, :id => @post.id %></button>
+        <%= link_to 'Edit', posts_path, :action => :edit, :id => @post.id, :class=>"btn btn-primary" %>
     <% end %>
       </div>
 </div>
