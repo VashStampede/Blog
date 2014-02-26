@@ -1,24 +1,24 @@
 <div class="row" xmlns="http://www.w3.org/1999/html">
-    <div class="span3 offset4">
-  <h1>Post <%= @post.id %></h1>
+    <div class="span3 offset5">
+  <h1><%= @post.title %></h1>
     </div>
 </div>
 
 <p>
   <div class="row">
-    <div class="span3 offset4">
+    <div class="span3 offset5">
       <pre>
-      <strong>Title:</strong><%= @post.title %>
-      </rb>
       <%= @post.text %>
       </pre>
     </div>
   </div>
 </p>
-<div class="span3 offset4">
+<div class="span3 offset5">
 <div class="btm-proup">
 
     <button class="btn"><%= link_to 'Back', :action => :index %></button>
-    <button class="btn"><%= link_to 'Edit', :action => :edit, :id => @post.id %></button>
-</div>
+    <% if can? :edit, Post %>
+        <button class="btn"><%= link_to 'Edit', :action => :edit, :id => @post.id %></button>
+    <% end %>
+      </div>
 </div>

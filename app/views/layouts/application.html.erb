@@ -8,19 +8,25 @@
 </head>
     <body>
         <div class="container">
-          <p class="navbar-text pull-right">
-          <div id="header">
-            <%= render "shared/links" %>
-           </div>
-          <% if notice %>
-              <p class="alert alert-notice"><%= notice %></p>
-          <% end %>
-          <% if alert %>
+            <ul class="navbar navbar-inverse">
+            <div class="navbar-inner">
+            <ul class="nav">
+            <li><%= render "shared/links" %></li>
+            <a class="pull-left"><li><a href="/#"><p class="text-info">Home</p></a></li></a>
+            <a class="pull-left"><li><a href="/posts"><p class="text-info">Listing posts</p></a></li></a>
+            <a class="pull-left"><li><a href="/posts/new"><p class="text-info">Create new post</p></a></li></a>
+            </ul>
+            </div>
+            </ul>
+        </div>
+    <% if notice %>
+        <p class="alert alert-notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+        <p class="alert alert-error"><%= alert %></p>
+    <% end %>
 
-              <p class="alert alert-error"><%= alert %></p>
-          <% end %>
-
-          <%= yield %>
+    <%= yield %>
         </div>
     </body>
 </html>

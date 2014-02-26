@@ -24,6 +24,8 @@ gem 'jquery-rails'
 
 gem 'pg'
 
+gem 'bootstrap-sass'
+
 gem 'twitter-bootstrap-rails'
 
 gem 'therubyracer'

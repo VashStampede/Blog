@@ -21,11 +21,7 @@
         <%= f.label :text %><br>
         <textarea rows="3"<%= f.text_area :text %></textarea>
       </p>
-
-    <p>
-      <div class="btn">
-        <%= f.submit %>
       </div>
-    </p>
+      <%=f.submit  "Save", :class=>"btn btn-primary"%>
 <% end %>
-</div>
+
