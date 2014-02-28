@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-#  before_filter :authenticate_user!, :only => [:new]
+  before_filter :authenticate_user!, :only => :show
   load_and_authorize_resource
-#  skip_authorize_resource :only => :new
+  skip_authorize_resource :only => :show
   def new
     @post = Post.new
   end

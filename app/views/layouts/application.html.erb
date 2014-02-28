@@ -7,17 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
     <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="row">
+        <div class="span5 offset2">
+        <div class="nav">
+          <li><a href="/#"><i class="icon-home"><p class="text-info">Home</p></i></a></li><li class="divider-vertical"></li>
+          <li><a href="/posts"><i class="icon-list-alt"><p class="text-info">Listing posts</p></i></a></li><li class="divider-vertical"></li>
+          <li><a href="/posts/new"><i class="icon-pencil"><p class="text-info">Create new post</p></i></a></li><li class="divider-vertical"></li>
+        </div>
+        </div>
+        <div class="span3 offset2">
+
+            <%= render "shared/links" %>
+
+        </div>
+      </div>
+          </div>
+    </div>
+
         <div class="container">
-            <ul class="navbar navbar-inverse">
-            <div class="navbar-inner">
-            <ul class="nav">
-            <li><%= render "shared/links" %></li>
-            <a class="pull-left"><li><a href="/#"><p class="text-info">Home</p></a></li></a>
-            <a class="pull-left"><li><a href="/posts"><p class="text-info">Listing posts</p></a></li></a>
-            <a class="pull-left"><li><a href="/posts/new"><p class="text-info">Create new post</p></a></li></a>
-            </ul>
-            </div>
-            </ul>
+        </div>
         </div>
     <% if notice %>
         <p class="alert alert-notice"><%= notice %></p>

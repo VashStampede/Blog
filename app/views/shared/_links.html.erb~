@@ -1,7 +1,7 @@
 
   <% if user_signed_in? %>
 <p class="pull-left">
-      <p class="text-success">Здравствуйте,<%= current_user.name %> <%= current_user.surname %></p>
+      <p class="text-success">Здравствуйте, <%=current_user.name current_user.surname %></p>
       <%= link_to "My Profile", edit_user_registration_path, :class=>"btn btn-primary" %>
       <%= link_to "Sign out", destroy_user_session_path, :class=>"btn btn-primary"%>
       </p>

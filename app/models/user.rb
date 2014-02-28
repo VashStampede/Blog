@@ -13,10 +13,12 @@ class User < ActiveRecord::Base
   attr_accessible :email,
                   :password,
                   :password_confirmation,
-                  :remember_me
-                  :admin
-  attr_accessible :admin
-  has_many :posts #связь с моделью post (не трогать)
+                  :remember_me,
+                  :admin,
+                  :name,
+                  :surname
+
+  has_many :posts 
   has_many :users_roles
   has_many :roles, :through => :users_roles
   before_create :create_role

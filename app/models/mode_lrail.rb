@@ -13,6 +13,8 @@ class ModeLrail < ActiveRecord::Base
   attr_accessible :email,
                   :password,
                   :password_confirmation,
-                  :remember_me
+                  :remember_me,
+                  :name,
+                  :surname
   # attr_accessible :title, :body
 end
