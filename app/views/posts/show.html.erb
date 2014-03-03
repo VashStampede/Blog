@@ -17,8 +17,6 @@
 <div class="btm-proup">
 
     <%= link_to 'Back', posts_path, :action => :index, :class=>"btn btn-primary" %>
-    <% if can? :edit, Post %>
-        <%= link_to 'Edit', posts_path, :action => :edit, :id => @post.id, :class=>"btn btn-primary" %>
-    <% end %>
+    
       </div>
 </div>

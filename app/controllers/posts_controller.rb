@@ -8,7 +8,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
-    @post.user = current_user
+    
+    @post.update_attributes(:user_id=>current_user.id)
     if @post.save
       redirect_to :action => :show, :id => @post.id
     else

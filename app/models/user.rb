@@ -16,7 +16,8 @@ class User < ActiveRecord::Base
                   :remember_me,
                   :admin,
                   :name,
-                  :surname
+                  :surname,
+                  :user_id
 
   has_many :posts 
   has_many :users_roles
